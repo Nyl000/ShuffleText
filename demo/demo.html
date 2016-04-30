@@ -2,114 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nyl Auto Writer - Jquery plugin example</title>
+    <title>ShuffleText- Jquery plugin example</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+
 
 </head>
 <body>
 <section id="landscape">
 
-    <h1>Jquery NylAutoWriter</h1>
-    <div class="box" id="nylautowriter">
+    <h1>ShuffleText</h1>
+    <div class="box" id="wrapper">
 
     </div>
     <div class="codebox">
         <code>
             <pre>
-$('#mytext').NylAutoWriter();
-                </pre>
+ $('#wrapper').ShuffleText([
+            'Hello world !',
+            "I'm a jquery plugin",
+            "I like to &lt;strong&gt;shuffle text&lt;/strong&gt; !"
+    ],{loop: true, delay: 3000});
+            </pre>
         </code>
     </div>
 
 </section>
 <section id="downloadInfos">
-    <a class="github-button" href="https://github.com/Nyl000/NylAutoWriter/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ntkme/github-buttons on GitHub">Download</a>
-    <a class="github-button" href="https://github.com/Nyl000/NylAutoWriter" data-style="mega" data-count-href="/Nyl000/NylAutoWriter/watchers" data-count-api="/repos/Nyl000/NylAutoWriter#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch Nyl000/NylAutoWriter on GitHub">Github</a>
+    <a class="github-button" href="https://github.com/Nyl000/ShuffleText/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ntkme/github-buttons on GitHub">Download</a>
+    <a class="github-button" href="https://github.com/Nyl000/ShuffleText" data-style="mega" data-count-href="/Nyl000/NylAutoWriter/watchers" data-count-api="/repos/Nyl000/NylAutoWriter#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch Nyl000/NylAutoWriter on GitHub">Github</a>
 </section>
 
-<section id="examples">
-    <h2>Cursor color</h2>
-    <div class="box" id="example1">Example with white colored cursor</div>
-    <div class="codebox">
-        <button class="firebutton" id="example1btn">Fire</button>
-        <code>
-            <pre>
-$('#mytext').NylAutoWriter({color: 'white'));
-                </pre>
-
-        </code>
-    </div>
-    <h2>Cursor color and background</h2>
-
-    <div class="box" id="example2">Example with background cursor</div>
-    <div class="codebox">
-        <button class="firebutton" id="example2btn">Fire</button>
-        <code>
-            <pre>
-$('#mytext').NylAutoWriter({
-    color: 'black',
-    backgroundColor: 'white',
-    blackAndWhite: true
-});
-                </pre>
-
-        </code>
-    </div>
-
-    <h2>Cursor cyan</h2>
-
-    <div class="box" id="example3">Example with background cursor</div>
-    <div class="codebox">
-        <button class="firebutton" id="example3btn">Fire</button>
-        <code>
-            <pre>
-$('#mytext').NylAutoWriter({
-    color: 'black',
-    backgroundColor: 'cyan',
-});
-                </pre>
-
-        </code>
-    </div>
-
-
-    <h2>Mask customization</h2>
-
-    <div class="box" id="example4">Example with background cursor</div>
-    <div class="codebox">
-        <button class="firebutton" id="example4btn">Fire</button>
-        <code>
-            <pre>
-$('#mytext').NylAutoWriter({
-    mask: '0123456789',
-    iterations : 100
-});
-                </pre>
-
-        </code>
-    </div>
-    <h2>Callback</h2>
-
-    <div class="box" id="example5">Example with callback</div>
-    <div class="codebox">
-        <button class="firebutton" id="example5btn">Fire</button>
-        <code>
-            <pre>
-$('#mytext').NylAutoWriter(
-    {color: white},
-    function(){
-        alert('callback event');
-    }
-);
-                </pre>
-
-        </code>
-    </div>
-</section>
 
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
-<script src="../nylautowriter/js/nylautowriter.jquery.js"></script>
+<script src="../shuffleText/js/shuffletext.jquery.js"></script>
 
 
 
@@ -117,48 +45,11 @@ $('#mytext').NylAutoWriter(
 <script>
 
     $(function() {
-
-        var sentences = [
-                    "$: Hello World !",
-                    "$: I'm the <strong>NylAutoWriter</strong> Jquery plugin",
-                    "$: You can see examples of codes by scrolling down.",
-                ],
-                cursor = 0;
-        $('#nylautowriter').html(sentences[cursor]);
-
-
-        var loop = function () {
-            $('#nylautowriter').NylAutoWriter({}, function () {
-                setTimeout(function () {
-                    cursor = (cursor + 1) % sentences.length;
-                    $('#nylautowriter').html(sentences[cursor]);
-                    loop();
-                }, 3000);
-            });
-        };
-        loop();
-
-        $('#example1btn').click(function(){
-            $('#example1').NylAutoWriter({color: "white"});
-        });
-        $('#example2btn').click(function(){
-            $('#example2').NylAutoWriter({color: 'black', backgroundColor: 'white', blackAndWhite: true});
-        });
-        $('#example3btn').click(function(){
-            $('#example3').NylAutoWriter({color: 'black', backgroundColor: 'cyan'});
-        });
-        $('#example4btn').click(function(){
-            $('#example4').NylAutoWriter({
-                mask: '0123456789',
-                iterations : 100
-            });
-        });
-        $('#example5btn').click(function(){
-            $('#example5').NylAutoWriter({color: "white"}, function(){
-                alert('callback event');
-            });
-        });
-
+        $('#wrapper').ShuffleText([
+            'Hello world !',
+            "I'm a jquery plugin",
+            "I like to <strong>shuffle text</strong> !"
+        ],{loop: true, delay: 3000});
     });
 </script>
 
