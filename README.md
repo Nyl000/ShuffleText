@@ -64,7 +64,7 @@ $('#text').ShuffleText([
     
 #####  step
     Default: function() {}
-    A callback function trigerred each time a text is rendered
+    A callback function trigered each time a text is rendered
     
     
    
