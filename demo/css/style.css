@@ -1,0 +1,88 @@
+html { height: 100%; font-family: 'Open Sans', sans-serif;}
+
+html, body { margin: 0; padding: 0;  }
+
+body {
+    background-image: url('../img/landscape.jpg');
+    background-size: cover;
+    background-position: 50% 100%;
+    background-attachment: fixed;
+    padding-bottom: 100px;
+}
+
+#landscape {
+
+    padding-top: 50px;
+}
+
+#landscape h1 {
+    margin: 0;
+
+    text-align: center;
+    color: #e07b00;
+    font-size: 4em;
+    font-weight: 300;
+    letter-spacing: 3px;
+
+}
+
+.box {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    margin: 30px auto 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 1.5em;
+
+}
+#examples .box {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    padding: 30px;
+    height: 50px;
+
+}
+
+.codebox {
+     margin: 15px auto 0 auto;
+     background: rgba(0, 0, 0, 0.71);
+     color: #e07b00;
+     max-width: 400px;
+     border-radius: 10px;
+     padding: 30px;
+
+
+ }
+.codebox pre {margin-bottom: 0;}
+
+#examples h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+#examples .firebutton {
+    display: block;
+    margin: 15px auto 15px auto;
+    color: white;
+    background-color: rgb(61, 130, 193);
+    padding: 4px 18px 4px 18px;
+    font-size: 1.5em;
+    border-radius: 4px;
+    border: 0;
+}
+#examples .firebutton:hover {
+    background-color: rgb(47, 104, 153);
+    cursor:pointer;
+
+}
+
+#downloadInfos {
+    margin: 0 auto 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 50px;
+}
