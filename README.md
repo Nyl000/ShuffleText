@@ -45,5 +45,27 @@ $('#text').ShuffleText([
 
 ### Options
 
-Coming Soon...
+##### loop
+    Default : false
+    If false, the plugin will stop at the last text
+    If true, it never stop and restart the array once ended
+    
+##### iterations
+    Default: 50
+    The number of random iterations used per letter for the cursor effect
 
+##### delay
+    Default: 3000
+    The delay in milliseconds between each text
+
+##### shuffleSpeed
+    Default: 0
+    The delay in milliseconds between each random letters during the shuffle effect
+    
+#####  step
+    Default: function() {}
+    A callback function trigerred each time a text is rendered
+    
+    
+   
+    
