@@ -30,7 +30,7 @@ $('#text').ShuffleText([
 	'First Text',
 	'Second Text',
 	'...'
-], {loop: true);
+], {loop: true});
 ```
 
 __Infinite loop with a custom delay between each text__
@@ -40,7 +40,7 @@ $('#text').ShuffleText([
 	'First Text',
 	'Second Text',
 	'...'
-], {loop: true, delay: '5000');
+], {loop: true, delay: '5000'});
 ```
 
 ### Options
